@@ -53,9 +53,22 @@ function setup() {
 
 function draw() {
   background("skyblue");
- 
+  for(i=1;i<logGroup1.length;i++){
+    if(logGroup1[i].x<0)
+      logGroup1[i].x=width;
+    }
+    for(i=1;i<carGroup1.length;i++){
+      if(carGroup1[i].x<0)
+      {
+      carGroup1[i].x=width;
+    }
+   if(carGroup1[i].x>width){
+     carGroup1[i].x=0;
+   }
+ }
  
 
   drawSprites();
 }
+
 
